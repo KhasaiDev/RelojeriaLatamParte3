@@ -35,7 +35,52 @@ class MainActivity : AppCompatActivity() {
                     supportActionBar?.setDisplayShowHomeEnabled(false)
                 }
                 R.id.otherFragment -> {
-                    supportActionBar?.title = "Relojeria Latam"
+                    supportActionBar?.title = "Cicero Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.secondFragment -> {
+                    supportActionBar?.title = "Li Europan Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.thirdFragment -> {
+                    supportActionBar?.title = "Kafka Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.forthFragment -> {
+                    supportActionBar?.title = "Love Craft Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.fifthFragment -> {
+                    supportActionBar?.title = "The Ancient Marine"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.sixthFragment -> {
+                    supportActionBar?.title = "Leather Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.seventhFragment -> {
+                    supportActionBar?.title = "A Tiempo Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.eighthFragment -> {
+                    supportActionBar?.title = "Black Klee"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.ninethFragment -> {
+                    supportActionBar?.title = "Watcher Store"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                    supportActionBar?.setDisplayShowHomeEnabled(true)
+                }
+                R.id.tenthFragment -> {
+                    supportActionBar?.title = "Jauggernaut Store"
                     supportActionBar?.setDisplayHomeAsUpEnabled(true)
                     supportActionBar?.setDisplayShowHomeEnabled(true)
                 }
@@ -45,6 +90,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -58,9 +106,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Settings ...", Toast.LENGTH_SHORT).show()
                 return true
             }
-            R.id.action_logout -> {
-                return true
-            }
             else -> return super.onOptionsItemSelected(item)
         }
     }
@@ -69,10 +114,6 @@ class MainActivity : AppCompatActivity() {
         super.onPrepareOptionsMenu(menu)
         val logoutItem = menu?.findItem(R.id.action_logout)
         return super.onPrepareOptionsMenu(menu)
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
 
